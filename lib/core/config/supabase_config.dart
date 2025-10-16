@@ -1,0 +1,13 @@
+import 'package:supabase_flutter/supabase_flutter.dart';
+
+class SupabaseConfig {
+  static Future<void> init() async {
+    await Supabase.initialize(
+      url: 'https://eisubqbhsrihujwaipgt.supabase.co',
+      anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVpc3VicWJoc3JpaHVqd2FpcGd0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk2ODE1MDQsImV4cCI6MjA3NTI1NzUwNH0.T-5i47PDGjkf2_md9JNCEtnXKBOcsgjwYhuC0jYZNnE',
+    );
+  }
+
+  static SupabaseClient get client => Supabase.instance.client;
+}
+
